@@ -4,6 +4,9 @@ body {
 	background-color: #C8E7FF;
 	display: flex;
 	justify-content: center;
+	-moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .tech {
