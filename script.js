@@ -63,7 +63,13 @@ function operate(a, b) {
 	if (answer % 1 === 0) {
 	document.getElementById('lowest').innerHTML = answer;
 	} else {
-	document.getElementById('lowest').innerHTML = answer.toFixed((answer.toString()).length - 2);
+	let string = '';
+	if ((answer.toString()).length >= 10) {
+		string = 8;
+	} else {
+		string = (answer.toString()).length;
+	}
+	document.getElementById('lowest').innerHTML = answer.toFixed(string);
 	}
 }
 
@@ -74,12 +80,9 @@ equaly.addEventListener('click', () => {
 		let working = tiw.charAt(tiw.length - 1);
 		if(working !== '' && working !== '.') {
 		secondInt = +tiw;
-		
 		document.getElementById('oldest').innerHTML += `\t ${secondInt}`;
 		document.getElementById('equal').textContent = '=';
-
 		operate(firstInt, secondInt);
-
 		t.classList.remove('spell');
 		t.classList.add('mpell');
 	    }
@@ -97,3 +100,62 @@ floating.addEventListener('click', () => {
 });
 
 let t = document.getElementById('lowest');
+
+document.addEventListener('keydown', e => {
+	switch(e.key) {
+		case 'Escape':
+			clr.click();
+			break;
+		case 'Backspace':
+			dle.click();
+			break;
+		case '=':
+			equaly.click();
+			break;
+		case '.':
+			floating.click();
+			break;
+		case '7':
+			document.getElementById('seven').click();
+			break;
+		case '8':
+			document.getElementById('eight').click();
+			break;
+		case '9':
+			document.getElementById('nine').click();
+			break;
+		case '/':
+			document.getElementById('div').click();
+			break;
+		case '4':
+			document.getElementById('four').click();
+			break;
+		case '5':
+			document.getElementById('five').click();
+			break;
+		case '6':
+			document.getElementById('six').click();
+			break;
+		case '*':
+			document.getElementById('mul').click();
+			break;
+		case '1':
+			document.getElementById('one').click();
+			break;
+		case '2':
+			document.getElementById('two').click();
+			break;
+		case '3':
+			document.getElementById('three').click();
+			break;
+		case '-':
+			document.getElementById('sub').click();
+			break;
+		case '0':
+			document.getElementById('hole').click();
+			break;
+		case '+':
+			document.getElementById('add').click();
+			break;
+	}
+});

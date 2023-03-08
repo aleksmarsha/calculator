@@ -24,11 +24,11 @@ body {
 .screen {
 	margin: 0.7rem;
 	background-color: #F8F9FB;
-	min-height: 5rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-end;
+	height: 20vh;
 }
 
 .buttons {
@@ -40,16 +40,74 @@ body {
 
 .buttons div {
 	text-align: center;
-	background-color: peachpuff;
+	color: #554994;
 	border-radius: 1rem;
+	font-size: 2rem;
+	font-weight: 600;
 }
 
 .buttons div:hover {
 	background-color: #F8F9F2;
 }
 
+#straud, .math {
+	background-color: #F6E6C2;
+}
+
+#straud:hover {
+	background-color: #F8F9F2;
+}
+
+#equality, .doing {
+	background-color: #E5FDD1;
+}
+
+#equality:hover {
+	background-color: #F8F9F2;
+}
+
+#del {
+	background-color: #99C4C8;
+}
+
+#del:hover {
+	background-color: #F8F9F2;
+}
+
+#clear {
+	background-color: #FF8DC7;
+}
+
+#clear:hover {
+	background-color: #F8F9F2;
+}
+
+.buttons div:active {
+	outline: 2px solid white;
+}
+
 #clear, #hole {
 	grid-column-start: 1;
 	grid-column-end: 3;
+}
+
+#lowest {
+	font-size: 2.5rem;
+	font-weight: 900;
+}
+
+#equal {
+	font-size: 2rem;
+	font-weight: 100;
+}
+
+#oldest {
+	font-size: 1.7rem;
+	font-weight: 100;
+}
+
+#lowest, #oldest {
+	max-width: 29vw;
+	overflow: auto;
 }
 
